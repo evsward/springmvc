@@ -1,0 +1,5 @@
+com\sunshine\gardens\model\Book.class
+com\sunshine\gardens\controller\BookController.class
+com\sunshine\gardens\service\BookService.class
+com\sunshine\gardens\inteceptor\MVCInteceptor.class
+com\sunshine\gardens\dao\BookDao.class
