@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- classPathEntry:数据库的JDBC驱动 -->
+	<classPathEntry
+		location="C:/Users/Administrator/.m2/repository/mysql/mysql-connector-java/5.1.10/mysql-connector-java-5.1.10.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<!-- 取消生成的代码注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://188.188.2.197:3306/dance_manager?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="root">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:自动生成代码的位置 -->
+
+		<javaModelGenerator targetPackage="com.dance.manager.model"
+			targetProject="E:/java/LiuwbGITRepo/garden/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="false" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.dance.manager.model.mapper"
+			targetProject="E:/java/LiuwbGITRepo/garden/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- <javaClientGenerator type="XMLMAPPER" targetPackage="com.lianzhong.demo.dao" 
+			targetProject="D:/Workplace/Sources/lianzhong/framework/components/lianzhong-system/src/main/java"> 
+			<property name="enableSubPackages" value="true" /> </javaClientGenerator> -->
+		<!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 
+		<table tableName="T_SYS_LOG" domainObjectName="SysLog" />
+		<table tableName="T_SYS_RESOURCE" domainObjectName="SysResource" />
+		<table tableName="T_SYS_ROLE" domainObjectName="SysRole" />
+		<table tableName="T_SYS_USER" domainObjectName="SysUser" />-->
+		<table tableName="T_RELOAD_MOUDLE" domainObjectName="ReloadMoudle" />
+	</context>
+</generatorConfiguration>
