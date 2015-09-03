@@ -9,7 +9,7 @@
 <body>
 	<h2>Add Book</h2>
 	<form method="post"
-		action="<%=request.getContextPath()%>/book.do?method=add">
+		action="<%=request.getContextPath()%>/add.do">
 		书名:<input type="text" name="name" id="name"> 作者:<input
 			type="text" name="author" id="author"> <input type="submit"
 			value="Add">
